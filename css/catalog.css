@@ -1,1 +1,20 @@
 /* catalog.css – diisi oleh anggota yang bertanggung jawab (lihat docs/ISSUES.md) */
+/* catalog.css – Main content: katalog mobil */
+.catalog { border-top: 1px solid var(--line); }
+.filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.chip {
+  padding: 8px 18px; border-radius: 999px; border: 1.5px solid var(--ink);
+  background: transparent; font: 500 .95rem var(--font-body); cursor: pointer;
+}
+.chip:hover { background: var(--line); }
+.chip.is-active { background: var(--ink); color: var(--white); }
+
+.car-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+.car-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.car-card svg { display: block; width: 100%; height: auto; padding: 24px 24px 0; background: linear-gradient(#EEF1F4, #E1E6EB); }
+.car-info { padding: 18px 20px 22px; }
+.car-info h3 { margin-bottom: 2px; }
+.car-meta { color: var(--steel); font-size: .92rem; margin-bottom: 10px; }
+.car-price { font: 700 1.2rem var(--font-head); margin: 0; }
+.car-card[hidden] { display: none; }
+.no-result { color: var(--steel); margin-top: 24px; }
