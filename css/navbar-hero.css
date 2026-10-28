@@ -1,1 +1,24 @@
 /* navbar-hero.css – diisi oleh anggota yang bertanggung jawab (lihat docs/ISSUES.md) */
+
+
+/* hero.css – Home / Hero section */
+.hero {
+  display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center;
+  min-height: calc(100vh - 64px); padding-top: 48px; padding-bottom: 48px;
+}
+.hero-text p { color: var(--steel); font-size: 1.1rem; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+
+.hero-stage { text-align: center; }
+.hero-car { width: 100%; height: auto; filter: drop-shadow(0 22px 18px rgba(16,24,32,.22)); }
+.swatches { display: flex; gap: 14px; justify-content: center; margin-top: 18px; }
+.swatch {
+  width: 36px; height: 36px; border-radius: 50%; background: var(--c); cursor: pointer;
+  border: 3px solid var(--bone); box-shadow: 0 0 0 1px var(--line);
+}
+.swatch.is-active { box-shadow: 0 0 0 3px var(--ink); }
+.swatch-label { margin: 12px auto 0; color: var(--steel); font-size: .95rem; }
+
+@media (max-width: 800px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+}
