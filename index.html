@@ -20,6 +20,74 @@
     <!-- ABOUT: dikerjakan di branch feature/about -->
 
     <!-- KATALOG: dikerjakan di branch feature/catalog -->
+     <!-- ===== MAIN CONTENT: KATALOG ===== -->
+    <section id="katalog" class="catalog">
+      <div class="section-head">
+        <h2>Katalog mobil</h2>
+        <p>Contoh unit tersedia. Ganti dengan data mobil showroom Anda.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter tipe mobil">
+        <button class="chip is-active" data-filter="semua">Semua</button>
+        <button class="chip" data-filter="sedan">Sedan</button>
+        <button class="chip" data-filter="suv">SUV</button>
+        <button class="chip" data-filter="mpv">MPV</button>
+        <button class="chip" data-filter="hatchback">Hatchback</button>
+      </div>
+
+      <div class="car-grid" id="carGrid">
+        <article class="car-card" data-type="sedan">
+          <svg viewBox="0 0 400 160" style="--paint:#1F4FD8" aria-hidden="true"><use href="#car"/></svg>
+          <div class="car-info">
+            <h3>Arga Sedan 1.5 AT</h3>
+            <p class="car-meta">Sedan, 2023, 18.000 km</p>
+            <p class="car-price">Rp 235.000.000</p>
+          </div>
+        </article>
+        <article class="car-card" data-type="suv">
+          <svg viewBox="0 0 400 160" style="--paint:#2E7D5B" aria-hidden="true"><use href="#car"/></svg>
+          <div class="car-info">
+            <h3>Bima SUV 2.0 Turbo</h3>
+            <p class="car-meta">SUV, 2022, 32.000 km</p>
+            <p class="car-price">Rp 410.000.000</p>
+          </div>
+        </article>
+        <article class="car-card" data-type="mpv">
+          <svg viewBox="0 0 400 160" style="--paint:#D9DDE2" aria-hidden="true"><use href="#car"/></svg>
+          <div class="car-info">
+            <h3>Dharma MPV 7 Seater</h3>
+            <p class="car-meta">MPV, 2021, 45.000 km</p>
+            <p class="car-price">Rp 215.000.000</p>
+          </div>
+        </article>
+        <article class="car-card" data-type="hatchback">
+          <svg viewBox="0 0 400 160" style="--paint:#C8312B" aria-hidden="true"><use href="#car"/></svg>
+          <div class="car-info">
+            <h3>Citra Hatchback RS</h3>
+            <p class="car-meta">Hatchback, 2024, 6.000 km</p>
+            <p class="car-price">Rp 265.000.000</p>
+          </div>
+        </article>
+        <article class="car-card" data-type="suv">
+          <svg viewBox="0 0 400 160" style="--paint:#222831" aria-hidden="true"><use href="#car"/></svg>
+          <div class="car-info">
+            <h3>Elang SUV Hybrid</h3>
+            <p class="car-meta">SUV, 2024, 4.000 km</p>
+            <p class="car-price">Rp 520.000.000</p>
+          </div>
+        </article>
+        <article class="car-card" data-type="sedan">
+          <svg viewBox="0 0 400 160" style="--paint:#D9DDE2" aria-hidden="true"><use href="#car"/></svg>
+          <div class="car-info">
+            <h3>Fajar Sedan Premium</h3>
+            <p class="car-meta">Sedan, 2020, 52.000 km</p>
+            <p class="car-price">Rp 330.000.000</p>
+          </div>
+        </article>
+      </div>
+      <p class="no-result" id="noResult" hidden>Belum ada unit untuk tipe ini. Coba pilih tipe lain.</p>
+    </section>
+
 
     <!-- KONTAK: dikerjakan di branch feature/contact -->
   </main>
