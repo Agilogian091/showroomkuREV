@@ -1,1 +1,58 @@
 /* base.css – diisi oleh anggota yang bertanggung jawab (lihat docs/ISSUES.md) */
+css
+/* base.css – variabel, reset, tipografi, tombol. Dipakai semua section. */
+:root {
+  --ink: #101820;
+  --bone: #F4F6F8;
+  --white: #FFFFFF;
+  --steel: #566574;
+  --line: #D8DEE4;
+  --paint: #1F4FD8;            /* warna cat aktif, diubah oleh js/hero.js */
+  --font-head: "Archivo", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+  --radius: 10px;
+  --maxw: 1120px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bone);
+  line-height: 1.65;
+}
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; margin: 0 0 .5em; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; font-stretch: 100%; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-size: 1.15rem; font-weight: 650; }
+p { margin: 0 0 1em; max-width: 68ch; }
+a { color: inherit; }
+ul { padding: 0; margin: 0; list-style: none; }
+section { padding: 88px 24px; max-width: var(--maxw); margin: 0 auto; }
+.section-head { margin-bottom: 40px; }
+.section-head p { color: var(--steel); }
+
+.btn {
+  display: inline-block; padding: 13px 22px; border-radius: 999px;
+  font: 600 1rem var(--font-body); text-decoration: none; cursor: pointer;
+  border: 2px solid transparent; transition: background .2s, color .2s, border-color .2s;
+}
+.btn-primary { background: var(--ink); color: var(--white); }
+.btn-primary:hover { background: var(--paint); }
+.btn-ghost { border-color: var(--ink); color: var(--ink); background: transparent; }
+.btn-ghost:hover { background: var(--ink); color: var(--white); }
+
+:focus-visible { outline: 3px solid var(--paint); outline-offset: 3px; }
+
+/* Warna siluet mobil */
+.car-body { fill: var(--paint); transition: fill .35s; }
+.car-glass { fill: rgba(255,255,255,.55); }
+.car-wheel circle:first-child { fill: #1a1f26; }
+.car-wheel .hub { fill: #aab3bd; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
