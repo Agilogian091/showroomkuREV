@@ -22,6 +22,41 @@
     <!-- KATALOG: dikerjakan di branch feature/catalog -->
 
     <!-- KONTAK: dikerjakan di branch feature/contact -->
+    <!-- ===== CONTACT ===== -->
+    <section id="kontak" class="contact">
+      <div class="section-head">
+        <h2>Hubungi kami</h2>
+        <p>Isi formulir singkat, pesan akan terbuka di WhatsApp showroom.</p>
+      </div>
+
+      <div class="contact-grid">
+        <ul class="contact-info">
+          <li><strong>Alamat</strong><span>Jl. Contoh Raya No. 123, Purwokerto</span></li>
+          <li><strong>Jam buka</strong><span>Senin–Sabtu, 09.00–17.00 WIB</span></li>
+          <li><strong>Telepon</strong><span>0812-0000-0000</span></li>
+          <li><strong>Instagram</strong><span><a href="https://instagram.com/" target="_blank" rel="noopener">@showroomku</a></span></li>
+        </ul>
+
+        <form class="contact-form" id="contactForm">
+          <label for="nama">Nama</label>
+          <input id="nama" name="nama" type="text" required autocomplete="name">
+
+          <label for="minat">Mobil yang diminati</label>
+          <select id="minat" name="minat">
+            <option>Belum tahu, mau konsultasi</option>
+            <option>Sedan</option>
+            <option>SUV</option>
+            <option>MPV</option>
+            <option>Hatchback</option>
+          </select>
+
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="4" placeholder="Contoh: Saya mau lihat unit hari Sabtu."></textarea>
+
+          <button type="submit" class="btn btn-primary">Kirim lewat WhatsApp</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER: dikerjakan di branch feature/footer -->
