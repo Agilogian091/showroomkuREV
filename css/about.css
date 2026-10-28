@@ -1,1 +1,14 @@
-/* about.css – diisi oleh anggota yang bertanggung jawab (lihat docs/ISSUES.md) */
+/* about.css – About / Profile section */
+.about { border-top: 1px solid var(--line); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.about-vm ul { list-style: disc; padding-left: 1.2em; color: var(--steel); }
+.about-vm li { margin-bottom: .4em; }
+.about-vm h3 + p { margin-bottom: 1.4em; }
+.values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 56px; border-top: 1px solid var(--line); }
+.values li { padding: 24px 24px 0 0; display: flex; flex-direction: column; gap: 6px; }
+.values strong { font: 650 1.05rem var(--font-head); }
+.values span { color: var(--steel); }
+
+@media (max-width: 800px) {
+  .about-grid, .values { grid-template-columns: 1fr; gap: 24px; }
+}
